@@ -1,0 +1,58 @@
+:root {
+   --main-bg: #FFFFFF;
+   --main-c: #111111;
+   --sec-c: #3a3a3a;
+   --ac-c: #288ace;
+   --danger-c: rgb(201, 43, 56);
+   --repost-c: springgreen;
+   --like-c: rgb(221, 59, 113);
+   --save-c: var(--main-c);
+
+   --m-p: 1rem;
+   --b-p: .5rem 1rem;
+   --media-r: 14px;
+
+   --b-border: 1px solid black;
+   --b-s-border: 1px solid #0f0f0f27;
+   --sp-c: #0f0f0f27;
+
+   --feed-top-nav-bg: #ffffff73;
+   --feed-top-nav-filter: blur(20px);
+   --feed-top-nav-h: 120px;
+   --top-nav-c: #ddd;
+   --bottom-nav-h: 60px;
+   --user-panel-top-nav-h: 60px;
+   --user-panel-img-header-h: 120px;
+   --user-panel-img-avatar-s: 100px;
+
+   --post-active-bg: #bbb;
+   --post-author-img-bar-w: 30px;
+   --post-bars-gap: .5rem;
+   --post-info-marks-gap: 0rem;
+   
+   @include md {
+      --user-panel-img-header-h: 200px;
+
+      --post-author-img-bar-w: 40px;
+      --post-bars-gap: .75rem;
+      --post-info-marks-gap: .5rem;
+   }
+}
+
+.darktheme {
+   --main-bg: #111111;
+   --main-c: #ddd;
+   --sec-c: #696969;
+   --repost-c: springgreen;
+   --like-c: rgb(221, 59, 113);
+   --save-c: var(--main-c);
+
+   --b-border: 1px solid #dddddd50;
+   --b-s-border: 1px solid #dddddd27;
+   --sp-c: #dddddd27;
+
+
+   --feed-top-nav-bg: #111111a9;
+
+   --post-active-bg: #171717;
+}

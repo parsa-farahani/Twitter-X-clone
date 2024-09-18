@@ -1,0 +1,86 @@
+// header & header-navbarsa
+.header__top-nav {
+   height: var(--user-panel-top-nav-h);
+}
+
+//main
+.main {
+   padding-top: var(--user-panel-top-nav-h);
+   border: 0;
+}
+
+.post-content {}
+
+.post-content__context {
+   padding-block: 1rem;
+   padding-inline: 1rem;
+
+}
+
+.post-content__context__user-cont {
+   margin-right: .5rem;
+}
+
+.post-content__context__user-cont__img-cont {
+   position: relative;
+   top: -10px;
+   width: 40px;
+   height: 40px;
+   border-radius: 50%;
+   overflow: clip;
+}
+
+.post-content__context__form {
+   flex: 1;
+   min-height: 20vh;
+   // height: auto;
+   max-height: 30vh;
+   overflow-y: auto;
+   display: block;
+
+}
+
+.post-content__context__form__inp {
+   width: 100%;
+   min-height: 100%;
+   max-height: none;
+   background: transparent;
+   resize: none;
+   display: block;
+   overflow: hidden;
+
+   &::placeholder {
+      color: var(--sec-c);
+   }
+
+   &:focus {
+      outline: none;
+   }
+}
+
+.post-content__options {}
+
+.post-content__options__visibility {}
+
+.post-content__options__sp-cont {
+   padding-inline-start: .5rem;
+   padding-inline-end: 2rem;
+}
+
+.post-content__options__sp {
+   margin-top: .75rem;
+   margin-bottom: .75rem;
+}
+
+.post-content__options__attachments {
+   padding-inline: 1rem;
+   user-select: none;
+}
+
+.post-content__options__attachments__btn {
+   margin-right: .5rem;
+   background-color: transparent;
+   border: 0;
+   cursor: pointer;
+
+}

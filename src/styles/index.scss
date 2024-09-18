@@ -1,0 +1,319 @@
+//////// SINGLE-PAGE'S GENERAL STYLES(index.html) ///////
+//
+// breakpoints
+@import 'breakpoints';
+// variables - functions
+@import 'variables';
+// base - layout
+@import 'base';
+// utilities
+@import 'utilities';
+
+
+html {
+   font-size: .85rem;
+
+   @include md {
+      font-size: 1rem;
+   }
+}
+
+body {
+   background-color: var(--main-bg);
+   color: var(--main-c);
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 1rem;
+}
+
+a:any-link {
+   color: var(--ac-c);
+   text-decoration: none;
+
+   img {
+      pointer-events: none;
+   }
+}
+
+a[disabled],
+button[disabled] {
+   cursor: default;
+   opacity: .5;
+}
+
+// not found alert
+.not-found-cont {
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   translate: -50% -50%;
+   border: var(--b-border);
+   border-radius: 1rem;
+   display: flex;
+   flex-direction: column;
+   font-size: 1rem;
+}
+
+.not-found-cont__alert {
+   padding: 1rem 2rem;
+   color: var(--danger-c);
+   font-size: 2.5rem;
+}
+
+.not-found-cont__backhome-btn:any-link {
+   display: block;
+   width: 100%;
+   padding: 1rem 2rem;
+   background-color: transparent;
+   border: 0;
+   border-top: var(--b-s-border);
+   color: var(--main-c);
+   font-size: inherit;
+   text-align: center;
+}
+
+// header & header-navbars
+.header {
+   position: relative;
+   z-index: 100;
+
+   a * {
+      pointer-events: none;
+   }
+
+   &.quiet {
+      .header__top-nav {
+         transform: translateY( calc(-1 * var(--feed-top-nav-h)) );
+      }
+
+      .header__bottom-nav {
+         opacity: .5;
+      }
+
+   }
+}
+
+.header__top-nav {
+   position: fixed;
+   inset: 0 0 auto 0;
+   height: var(--feed-top-nav-h);
+   background-color: var(--feed-top-nav-bg);
+   backdrop-filter: var(--feed-top-nav-filter);
+
+   color: var(--main-c);
+   transition: transform .5s ease-out;
+}
+
+.header__top-nav__row {
+   position: relative;
+   padding-inline: 1rem;
+   padding-top: .5rem;
+   padding-bottom: .5rem;
+
+   display: flex;
+   flex-flow: row nowrap;
+   align-items: center;
+}
+
+.header__top-nav__row--user-home-links {
+   justify-content: space-between;
+}
+
+.header__top-nav__row--user-home-links__user-link:any-link {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 50px;
+   height: 50px;
+   border: var(--b-border);
+   border-radius: 50%;
+   overflow: clip;
+}
+
+.header__top-nav__row--user-home-links__user-link__img {
+
+}
+
+
+.header__top-nav__row--user-home-links__home-link:any-link {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   translate: -50% -50%;
+   width: 20px;
+   height: 20px;
+   color: var(--main-c);
+
+   @include md {
+      width: 30px;
+      height: 30px;
+   }
+}
+
+// arrow bac -> home
+.header__top-nav__row--user-home-links__back-home-link:any-link {
+   position: relative;
+   color: inherit;
+}
+
+.header__top-nav__user-info {
+   margin-left: 2rem;
+}
+
+.header__top-nav__user-info__username {
+
+}
+
+.header__top-nav__user-info__posts-count {
+   margin-block-start: .25rem;
+   color: var(--sec-c);
+}
+
+.header__top-nav__row--result-type {
+   gap: 1rem;
+}
+
+.header__top-nav__row--result-type__btn {
+   display: inline-block;
+   width: 50%;
+}
+
+.header__top-nav__new-posts-btn-cont {
+   position: absolute;
+   top: calc(100% + .2rem);
+   left: 50%;
+   translate: -50% 0%;
+
+   &.hidden {
+      left: -9999px;
+   }
+}
+
+.header__top-nav__new-posts-btn {
+   padding-block: .3rem;
+   font-size: .9rem;
+}
+
+
+.header__bottom-nav {
+   position: fixed;
+   inset: auto 0 0 0;
+   height: var(--bottom-nav-h);
+   padding-block: .75rem;
+   padding-inline: 1rem;
+   background-color: var(--main-bg);
+   border-top: var(--b-s-border);
+}
+
+.header__bottom-nav__inner {
+   display: flex;
+   flex-flow: row nowrap;
+
+}
+
+
+.header__bottom-nav__link:any-link {
+   flex: 1;
+   // display: block;
+   color: var(--main-c);
+}
+
+.header__bottom-nav__tweet-btn:any-link {
+   position: absolute;
+   right: var(--m-p);
+   bottom: calc(100% + 1rem);
+   width: 4rem;
+   height: 4rem;
+   border-radius: 50%;
+   color: var(--main-c);
+}
+
+
+// main
+main {
+   // padding-inline: var(--m-p);
+   border-inline: var(--b-s-border);
+}
+
+
+// user-tweets styling (slotted-elememts)
+user-tweet {
+   &:active {
+      background-color: var(--post-active-bg);
+   }
+}
+
+user-tweet a:any-link {
+   color: inherit;
+   text-decoration: none;
+}
+
+.post-ctx__content__media__inner {
+   overflow: hidden;
+}
+
+
+/* <img> & <video> inside */
+.post-ctx__content__media__inner img,
+.post-ctx__content__media__inner video {
+   display: block;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   object-position: center;
+}
+
+
+
+/* only 1 media-tag */
+user-tweet.m-1 .post-ctx__content__media__inner:nth-child(1) {
+   grid-area: 1 / 1 / 3 / 3;
+}
+
+/* 2 media-tag */
+user-tweet.m-2 .post-ctx__content__media__inner:nth-child(1), 
+user-tweet.m-2 .post-ctx__content__media__inner:nth-child(1) {
+   grid-area: 1 / 1 / 3 / 2;
+}
+user-tweet.m-2 .post-ctx__content__media__inner:nth-child(2), 
+user-tweet.m-2 .post-ctx__content__media__inner:nth-child(2) {
+   grid-area: 1 / 2 / 3 / 3;
+}
+
+/* 3 media-tag */
+user-tweet.m-3 .post-ctx__content__media__inner:nth-child(1), 
+user-tweet.m-3 .post-ctx__content__media__inner:nth-child(1) {
+   grid-area: 1 / 1 / 3 / 2;
+}
+user-tweet.m-3 .post-ctx__content__media__inner:nth-child(2), 
+user-tweet.m-3 .post-ctx__content__media__inner:nth-child(2) {
+   grid-area: 1 / 2 / 2 / 3;
+}
+user-tweet.m-3 .post-ctx__content__media__inner:nth-child(3), 
+user-tweet.m-3 .post-ctx__content__media__inner:nth-child(3) {
+   grid-area: 2 / 2 / 3 / 3;
+}
+
+/* 4 media-tag(and upwards: 5, 6, ...) */
+user-tweet.m-4 .post-ctx__content__media__inner:nth-child(1), 
+user-tweet.m-4 .post-ctx__content__media__inner:nth-child(1) {
+   grid-area: 1 / 1 / 2 / 2;
+}
+user-tweet.m-4 .post-ctx__content__media__inner:nth-child(2), 
+user-tweet.m-4 .post-ctx__content__media__inner:nth-child(2) {
+   grid-area: 1 / 2 / 2 / 3;
+}
+user-tweet.m-4 .post-ctx__content__media__inner:nth-child(3), 
+user-tweet.m-4 .post-ctx__content__media__inner:nth-child(3) {
+   grid-area: 2 / 1 / 3 / 2;
+}
+user-tweet.m-4 .post-ctx__content__media__inner:nth-child(4), 
+user-tweet.m-4 .post-ctx__content__media__inner:nth-child(4) {
+   grid-area: 2 / 2 / 3 / 3;
+}
+
+.post-ctx__content__media__inner {
+   transition: filter .2s;
+}
+.post-ctx__content__media__inner:hover {
+   filter: brightness(.8);
+}

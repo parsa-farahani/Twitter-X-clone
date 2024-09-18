@@ -1,0 +1,16 @@
+{
+   "name": "Orion",
+   "short_name": "Orion",
+   "start_url": ".",
+   "theme_color": "#111111",
+   "background_color": "#111111",
+   "display": "standalone",
+   "orientation": "portrait",
+   "icons": [
+      {
+         "src": "assets/icons/x-logo/x-icon.png",
+         "type": "image/png",
+         "sizes": "512x512"
+      }
+   ]
+}

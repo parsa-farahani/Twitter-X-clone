@@ -1,0 +1,20 @@
+*,
+*::before,
+*::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   -webkit-tap-highlight-color: transparent;
+   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+input,
+textarea,
+button,
+select,
+option,
+label {
+   color: inherit;
+   font-size: inherit;
+   font-family: inherit;
+}
