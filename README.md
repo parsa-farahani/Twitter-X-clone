@@ -56,7 +56,7 @@ Each post is represented as a `<user-tweet>` custom tag, implemented as a Web Co
 - **localStorage**: Used for setting/getting data related to individual posts when users navigate to specific post pages (as there is currently no backend API).
 
 ## Usage
-To use this application, visit the deployment page or run `index.html` on a local server.
+To use this application, visit the [deployment page](https://github.com/parsa-farahani/Twitter-X-clone-deployment/) or run 'npm install' then 'npm start'
 
 ## Contact Information
 For inquiries or feedback, please reach out via email at [aiparsa83@gmail.com](mailto:aiparsa83@gmail.com) or connect with me on [LinkedIn](https://www.linkedin.com/in/parsa-farahani-935195293).
