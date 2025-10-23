@@ -1,7 +1,7 @@
 # Twitter X Clone
 
 ## Preview
-[![Twitter X Clone Preview](src/assets/screenshots/sc-1.png)](https://github.com/parsa-farahani/Twitter-X-clone)
+[![Twitter X Clone Preview](src/assets/screenshots/sc-1.png)](https://parsa-farahani.github.io/Twitter-X-clone-deployment/)
 
 ## Overview
 This application is a frontend clone of Twitter (X), developed using core web technologies including HTML, Sass (CSS), and JavaScript, without any frameworks or libraries. The project showcases my skills in fundamental web development concepts. Key tools used in the development process include Webpack, Babel, Gulp, and Workbox.
